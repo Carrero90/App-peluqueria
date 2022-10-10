@@ -158,7 +158,7 @@ function seleccionarServicio(e) {
         elemento.classList.add('seleccionado');
            
         const servicioObj = {
-            id = parseInt( elemento.dataset.idServicio ),
+            id : parseInt( elemento.dataset.idServicio ),
             nombre: elemento.firstElementChild.textContent,
             precio: elemento.firstElementChild.nextElementSibling.textContent
         }
@@ -173,14 +173,14 @@ function seleccionarServicio(e) {
 function eliminarServicio(id) {
     const { servicios } = cita;
     cita.servicios = servicios.filter( servicio => servicio.id !== id);
-    console.log(cita);
+   
 }
 
 
 function agregarServicio(servicioObj){
     const { servicios } = cita;
     cita.servicios = [...servicios, servicioObj];
-    console.log(cita);
+    
 }
 
 
@@ -429,7 +429,7 @@ function horaCita() {
         }else {
             cita.hora = horaCita;
 
-            console.log(cita);
+            
         }
     });
 }
